@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratchapol Sukto | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP for High-End Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            color: #f8fafc;
+
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            filter: blur(100px);
+            border-radius: 50%;
+
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+
+
+    <!-- Background Animated Blobs -->
+    <div class="blob blob-1 top-[-10%] left-[-10%]"></div>
+    <div class="blob blob-2 bottom-[-10%] right-[-10%]"></div>
+    <div class="blob blob-3 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-purple-500/30"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4" id="main-nav">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass rounded-full px-6 py-3 opacity-0" id="nav-container">
+            <div class="text-xl font-bold tracking-tighter text-gradient">RS.PORTFOLIO</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-sky-400 transition">หน้าแรก</a>
+                <a href="#about" class="hover:text-sky-400 transition">เกี่ยวกับฉัน</a>
+                <a href="#skills" class="hover:text-sky-400 transition">ทักษะ</a>
+                <a href="#contact" class="hover:text-sky-400 transition">ติดต่อ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+        <div class="text-center">
+            <div class="relative inline-block mb-8 opacity-0" id="hero-img">
+                <div class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-sky-500 p-1 overflow-hidden mx-auto shadow-2xl shadow-sky-500/20">
+                    <img src="tmpImage_35002C31-B235-457D-9641-136F3F765528.jpg" alt="Profile" class="w-full h-full object-cover rounded-full bg-slate-800">
+                </div>
+                <div class="absolute bottom-2 right-2 w-6 h-6 bg-green-500 border-4 border-slate-900 rounded-full"></div>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-4 tracking-tight opacity-0" id="hero-title">
+                สวัสดีครับผม <br> <span class="text-gradient">รัชพล สุขโต</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto font-light opacity-0" id="hero-desc">
+                ผู้ที่หลงใหลในการสร้างสรรค์สิ่งใหม่ๆ และพร้อมที่จะเติบโตในโลกของเทคโนโลยี 
+                <span class="text-sky-400 font-medium">"เรียบหรู ดูแพง แต่ทำงานจริง"</span>
+            </p>
+            <div class="mt-10 opacity-0" id="hero-btn">
+                <a href="#contact" class="px-8 py-3 bg-sky-600 hover:bg-sky-500 text-white rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-sky-600/30">
+                    ติดต่องาน
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">เกี่ยวกับ<span class="text-sky-400">ฉัน</span></h2>
+            <div class="glass p-8 md:p-12 rounded-3xl grid md:grid-cols-2 gap-12 items-center reveal">
+                <div>
+                    <p class="text-slate-300 leading-relaxed text-lg">
+                        ผมชื่อ <span class="text-white font-semibold">นายรัชพล สุขโต</span> 
+                        ปัจจุบันอายุ <span class="text-white font-semibold">20 ปี</span> 
+                        มีความมุ่งมั่นที่จะพัฒนาทักษะของตัวเองให้ก้าวไปสู่ระดับมืออาชีพ 
+                        ชอบเรียนรู้เทคโนโลยีใหม่ๆ และให้ความสำคัญกับคุณภาพของงานเป็นอันดับหนึ่ง
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center p-4 glass rounded-2xl reveal-item">
+                        <div class="w-12 h-12 bg-sky-500/20 rounded-lg flex items-center justify-center mr-4 text-sky-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400">อายุ</p>
+                            <p class="font-semibold">20 ปี</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 glass rounded-2xl reveal-item">
+                        <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4 text-purple-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400">อีเมล</p>
+                            <p class="font-semibold">68319010014@rvc.ac.th</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 reveal">ทักษะและความ<span class="text-sky-400">เชี่ยวชาญ</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl hover:border-sky-500 transition-all group reveal-card">
+                    <div class="w-14 h-14 bg-sky-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Coding & Dev</h3>
+                    <p class="text-slate-400 font-light">พัฒนาเว็บไซต์และซอฟต์แวร์ด้วยเทคโนโลยีสมัยใหม่ เน้นความเร็วและเสถียรภาพ</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover:border-purple-500 transition-all group reveal-card">
+                    <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-slate-400 font-light">ออกแบบหน้าจอที่ใช้งานง่าย สวยงาม และตอบโจทย์ผู้ใช้งานในทุกอุปกรณ์</p>
+                </div>
+                <div class="glass p-8 rounded-3xl hover:border-emerald-500 transition-all group reveal-card">
+                    <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Problem Solving</h3>
+                    <p class="text-slate-400 font-light">วิเคราะห์ปัญหาและหาทางออกอย่างเป็นระบบ เพื่อให้งานออกมามีประสิทธิภาพสูงสุด</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>&copy; 2024 Ratchapol Sukto. All rights reserved. <br> <span class="text-sky-500/50">Designed for the Future.</span></p>
+    </footer>
+
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+
+
+        // Hero Animations
+        const tl = gsap.timeline();
+        tl.to('#nav-container', { opacity: 1, y: 0, duration: 1, ease: 'power4.out' })
+          .to('#hero-img', { opacity: 1, scale: 1, duration: 1, ease: 'back.out(1.7)' }, '-=0.5')
+          .to('#hero-title', { opacity: 1, y: 0, duration: 1, ease: 'power4.out' }, '-=0.7')
+          .to('#hero-desc', { opacity: 1, y: 0, duration: 1, ease: 'power4.out' }, '-=0.7')
+          .to('#hero-btn', { opacity: 1, y: 0, duration: 1, ease: 'power4.out' }, '-=0.7');
+
+        // Background Blob Animation
+        gsap.to('.blob-1', { 
+            x: '100vw', y: '50vh', duration: 20, repeat: -1, yoyo: true, ease: 'sine.inOut' 
+        });
+        gsap.to('.blob-2', { 
+            x: '-100vw', y: '-50vh', duration: 25, repeat: -1, yoyo: true, ease: 'sine.inOut' 
+        });
+        gsap.to('.blob-3', { 
+            scale: 1.5, duration: 10, repeat: -1, yoyo: true, ease: 'sine.inOut' 
+        });
+
+        // Scroll Reveal Animations
+        gsap.utils.toArray('.reveal').forEach(el => {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse'
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: 'power3.out'
+            });
+        });
+
+        // Staggered Reveal for items
+        gsap.utils.toArray('.reveal-item').forEach((el, i) => {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 90%',
+                },
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                delay: i * 0.2,
+                ease: 'power2.out'
+            });
+        });
+
+        // Skill Cards Stagger
+        gsap.to('.reveal-card', {
+            scrollTrigger: {
+                trigger: '#skills',
+                start: 'top 70%',
+            },
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'back.out(1.7)'
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
